@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Frickbear Editor — Frickbears 3 Save Editor</title>
+  <meta name="description" content="Unofficial, fully local save editor for Frickbears 3. Edit run saves, records, unlocks, upgrades, minigames and settings right in your browser.">
+  <meta name="theme-color" content="#15141d">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/PixelOperator.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/PixelOperator-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/PixelOperatorMono.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/app.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div id="app"></div>
+
+  <input id="file-input" type="file" multiple accept=".wario,.txt,application/json,text/plain" hidden>
+
+  <div id="drop-overlay" class="drop-overlay" aria-hidden="true">
+    <div class="drop-overlay-inner">
+      <div class="drop-icon">⇣</div>
+      <strong>DROP SAVE FILE</strong>
+      <span>.wario / endlessdata .txt</span>
+    </div>
+  </div>
+
+  <div id="toast-stack" class="toast-stack" role="status" aria-live="polite"></div>
+  <div id="modal-root"></div>
+
+  <script src="assets/data.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
